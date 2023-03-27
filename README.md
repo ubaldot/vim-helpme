@@ -7,24 +7,24 @@ Well, I have both of these problems and this plugin may help you too.
 
 HelpMe! is nothing more than a tiny customizable popup menu for Vim 9.0+ that you can fill as you want and that you recall whenever you want just by simply typing `:HelpMe`.
 
-## Usage + Customization
+## Usage
 Simply enter the command `:HelpMe` to open the menu, find what you're looking for, then press `q` to close the menu. That's it.
 
 Of course, there won't be much in the menu until you add stuff to it. Use the following `.vimrc` entry as an guide for customizing your own menu:
 
 ``` 
 let g:HelpMeItems = [
-    \ "Shortcuts:",
-    \ "tt           toggle split terminal buffer",
-    \ "daw          delete a word under the cursor",
-    \ "caw          change a word under the cursor and insert",
-    \ "di\"          delete text inside quotes (for others, change \")",
-    \ "ci\"          change text inside quotes (for others, change \")",
-    \ "<C-n>        enter multiple cursors mode",
-    \ "",
-    \ "Commands:",
-    \ ":H           insert nicely formatted header comment (custom)",
-    \ ]
+    "Shortcuts:",
+    "tt           toggle split terminal buffer",
+    "daw          delete a word under the cursor",
+    "caw          change a word under the cursor and insert",
+    "di\"          delete text inside quotes (for others, change \")",
+    "ci\"          change text inside quotes (for others, change \")",
+    "<C-n>        enter multiple cursors mode",
+    "",
+    "Commands:",
+    ":H           insert nicely formatted header comment (custom)",
+    ]
 ```
 
 By default, Vim will ignore all other input aside from `q` while HelpMe! is open. 
