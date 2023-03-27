@@ -1,7 +1,8 @@
 # HelpMe!
-HelpMe! is a tiny customizable popup menu for Vim 8.2+
-
 Have you ever found yourself staring at a blinking cursor on Vim's command line, trying your hardest to remember what the command you're trying to perform is?
+
+HelpMe! is a tiny customizable popup menu for Vim 9.0+
+
 
 Remember that super cool trick you saw on Reddit a year ago and thought, "Wow, I'm totally going to use that!" and now you can't remember what it is?
 
@@ -27,7 +28,7 @@ let g:HelpMeItems = [
     \ ]
 ```
 
-By default, Vim will ignore all other input aside from `q` while HelpMe! is open. If you'd like to disable this, add `let g:HelpMeAllowInput = 1` to your `.vimrc`, this would allow you to operate Vim normally while the window is open. It'll cover up the center of your screen, but maybe this would be useful for someone.
+By default, Vim will ignore all other input aside from `q` while HelpMe! is open. 
 
 Optionally, you can map a shortcut to call `:HelpMe` with something like this:
 ```
