@@ -13,7 +13,7 @@ Simply enter the command `:HelpMe` to open the menu, find what you're looking fo
 Of course, there won't be much in the menu until you add stuff to it. Use the following `.vimrc` entry as an guide for customizing your own menu:
 
 ``` 
-let g:HelpMeItems = [
+g:HelpMeItems = [
     "Shortcuts:",
     "tt           toggle split terminal buffer",
     "daw          delete a word under the cursor",
