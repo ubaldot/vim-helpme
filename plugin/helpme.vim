@@ -1,7 +1,8 @@
+vim9script
+
 # helpme.vim
 # github.com/ubaldot/helpme-vim
 
-vim9script
 
 if exists('g:plugin_helpme')
     finish
@@ -25,7 +26,7 @@ if !exists('g:HelpMeWindowTitle')
     g:HelpMeWindowTitle = "HelpMe!" # the default title of the popup menu
 endif
 
-# if no menu items exist, add some help text, otherwise set height to the number of items in the list
+# From here
 if !exists('g:HelpMeItems')
     g:HelpMeHeight = 4
     g:HelpMeItems = [
@@ -44,15 +45,22 @@ for item in g:HelpMeItems
     g:HelpMeWidth = min([g:HelpMeMaxWidth, max([len(item), g:HelpMeMinWidth])])
 endfor
 
-def HelpMePopup()
-    popup_dialog(g:HelpMeItems, {
+def HelpMePopup(...passed_items: list<string>)
+    var items = g:HelpMeItems
+    if empty(passed_items)
+    else
+        items = readfile(passed_items[0])
+    endif
+    popup_dialog(items, {
         title: g:HelpMeWindowTitle,
         filter: HelpMeFilter,
         maxheight: &lines - 1,
         })
+    g:HelpMeItems = items
 enddef
 
-# close the menu with q, all other keys are consumed to avoid accidental keypresses while the menu is open
+
+# close the menu with q
 def HelpMeFilter(id: number, key: string): bool
     if key == 'q'
         popup_close(id)
@@ -62,6 +70,5 @@ def HelpMeFilter(id: number, key: string): bool
     endif
 enddef
 
-# default mappings
-command! HelpMe :call <sid>HelpMePopup()
+command! -nargs=? -complete=file HelpMe :call <sid>HelpMePopup(<f-args>)
 
