@@ -71,7 +71,7 @@ then `:HelpMe ~/numpy_cmds.txt` will produce:
 A handy way to have different notes always at hand is to create custom commands that source from different files, like for example:
 
 ```
-command! HelpMeNumpy :HelpMe ~/numpy_cmd.txt
+command! HelpMeNumpy :HelpMe ~/numpy_cmds.txt
 command! HelpMeShopping :HelpMe ~/shopping_list.txt
 ```
 Invokation of `:HelpMeNumpy` and `:HelpMeShopping` will produce:
