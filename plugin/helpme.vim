@@ -47,8 +47,7 @@ endfor
 
 def HelpMePopup(...passed_items: list<string>)
     var items = g:HelpMeItems
-    if empty(passed_items)
-    else
+    if !empty(passed_items)
         items = readfile(passed_items[0])
     endif
     popup_dialog(items, {
