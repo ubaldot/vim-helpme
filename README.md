@@ -45,7 +45,9 @@ nnoremap <silent> <C-h> :HelpMe<CR>
 This would make `ctrl+h` to open the HelpMe! menu.
 
 ### Sourcing from external files
-You can also specify the list in an external file and source it through`:HelpMe <filename>`.
+Sometimes, you want to take a look at different notes but you still want to access them at the speed of light while doing stuff with Vim. 
+
+In such a case you can simply write your notes in an external file and source it of them through`:HelpMe <filename>`.
 For example, if you have a `numpy_cmds.txt` file in your HOME directory with the following content:
 
 ```
@@ -72,7 +74,7 @@ then `:HelpMe ~/numpy_cmds.txt` will produce:
 ![helpme](/numpy_preview.png)
 
 
-A handy way to have different notes always at hand is to create custom commands that source from different files, like for example:
+You can also create custom commands to access different notes, like for example:
 
 ```
 command! HelpMeNumpy :HelpMe ~/numpy_cmds.txt
