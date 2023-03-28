@@ -33,7 +33,11 @@ Then, invokation of `:HelpMe` will produce:
 
 ![helpme](/helpme_preview.png)
 
-Optionally, you can map a shortcut to call `:HelpMe` with something like this:
+That's all!
+
+### Mapping
+
+You can map a shortcut to call `:HelpMe` with something like this:
 ```
 nnoremap <silent> <C-h> :HelpMe<CR>
 ```
