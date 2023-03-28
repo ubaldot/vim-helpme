@@ -7,6 +7,8 @@ Well, I have both of these problems and this plugin may help you too.
 
 HelpMe! is nothing more than a tiny customizable popup menu for Vim 9.0+ that you can fill as you want and that you recall whenever you want just by simply typing `:HelpMe`.
 
+Have your favourite notes always at hand!
+
 ## Usage
 Simply enter the command `:HelpMe` to open the menu, find what you're looking for, then press `q` to close the menu. That's it.
 
