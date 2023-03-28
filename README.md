@@ -11,7 +11,9 @@ HelpMe! is nothing more than a tiny customizable popup menu for Vim 9.0+ that yo
 *Your favourite notes always at hand!*
 
 ## Usage
-Simply enter the command `:HelpMe` to open the menu, find what you're looking for, then press `q` to close the menu. That's it.
+Simply enter the command `:HelpMe` to open the menu, find what you're looking for, then press `q` to close the menu. 
+
+That's it.
 
 Of course, there won't be much in the menu until you add stuff to it. Use the following `.vimrc` entry as an guide for customizing your own menu:
 
@@ -33,7 +35,6 @@ Then, invokation of `:HelpMe` will produce:
 
 ![helpme](/helpme_preview.png)
 
-That's all!
 
 ### Mapping
 
