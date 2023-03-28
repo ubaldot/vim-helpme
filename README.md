@@ -93,7 +93,7 @@ then `:HelpMe ~/shopping_list.txt` will produce:
 
 ![helpme](/shopping_list_preview.png)
 
-You can also create custom commands to access different notes, like for example:
+You can also create custom commands to source from different files, like for example:
 
 ```
 command! HelpMeNumpy :HelpMe ~/numpy_cmds.txt
