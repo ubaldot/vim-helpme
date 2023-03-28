@@ -2,7 +2,7 @@
 
 Have you ever found yourself staring at a blinking cursor on Vim's command line, trying your hardest to remember what the command you're trying to perform is?
 
-Are you learning a new Python library but you could not really remember that command and you are too tired to go through all the API documentation to find it out?
+Are you learning a new Python library but you could not really remember that cool command and you are too tired to go through all the API documentation to find it out?
 
 Well, I have both of these problems and this plugin may help you too.
 
