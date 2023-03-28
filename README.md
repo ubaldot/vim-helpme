@@ -44,6 +44,9 @@ nnoremap <silent> <C-h> :HelpMe<CR>
 ```
 
 This would make `ctrl+h` to open the HelpMe! menu.
+You still need to press `q` to close the menu.
+
+
 
 ### Sourcing from external files
 Sometimes, you want to take a look at different notes but you still want to access them at the speed of light without leaving Vim. 
