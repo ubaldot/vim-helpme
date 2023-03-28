@@ -77,6 +77,21 @@ then `:HelpMe ~/numpy_cmds.txt` will produce:
 
 ![helpme](/numpy_preview.png)
 
+or, if you have a `shopping_list.txt` with the following content:
+
+```
+SHOPPING LIST
+-------------
+Potatoes
+Milk
+Bananas
+Peperoni
+Tomatoes
+```
+
+then `:HelpMe ~/shopping_list.txt` will produce:
+
+![helpme](/shopping_list_preview.png)
 
 You can also create custom commands to access different notes, like for example:
 
@@ -84,13 +99,9 @@ You can also create custom commands to access different notes, like for example:
 command! HelpMeNumpy :HelpMe ~/numpy_cmds.txt
 command! HelpMeShopping :HelpMe ~/shopping_list.txt
 ```
-Invokation of `:HelpMeNumpy` and `:HelpMeShopping` will produce:
+Invokation of `:HelpMeNumpy` and `:HelpMeShopping` will produce the output depicted in the previous two screenshots, respectively.
 
 
-![helpme](/numpy_preview.png)
-![helpme](/shopping_list_preview.png)
-
-respectively.
 
 ## Installation
 Add `helpme.vim` to your `~/.vim/plugin/` folder, or if you're using Vim-Plug, add `Plug 'ubaldot/helpme-vim'` to your `.vimrc` file.
