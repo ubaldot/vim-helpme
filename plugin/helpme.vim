@@ -55,7 +55,7 @@ def HelpMePopup(...passed_items: list<string>)
         filter: HelpMeFilter,
         maxheight: &lines - 1,
         })
-    g:HelpMeItems = items
+    # g:HelpMeItems = items
 enddef
 
 
