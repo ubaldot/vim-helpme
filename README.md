@@ -51,9 +51,11 @@ LINEAR ALGERBA
 A @ B - Matrix multiplication
 lambda, U = la.eig(A) - eigenvalues and (right) eigenvectors
 
-then :HelpMe numpy_cmds.txt will produce the following:
+then `:HelpMe numpy_cmds.txt? will produce the following:
+
 
 ![helpme](/NumpyExample.png)
+
 
 Optionally, you can map a shortcut to call `:HelpMe` with something like this:
 ```
@@ -70,8 +72,10 @@ command! HelpMeShopping :HelpMe ~/shopping_list.txt
 ```
 This would make `:HelpMeNumpy` to source from `~/numpy_cmd.txt` and `:HelpMeShopping` to source from `~/shopping_list.txt`
 
+
 ![helpme](/NumpyExample.png)
 ![helpme](/ShoppingListExample.png)
+
 
 ## Installation
 Add `helpme.vim` to your `~/.vim/plugin/` folder, or if you're using Vim-Plug, add `Plug 'ubaldot/helpme-vim'` to your `.vimrc` file.
