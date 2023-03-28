@@ -95,8 +95,8 @@ then `:HelpMe ~/shopping_list.txt` will produce:
 You can also create custom commands to source from different files, like for example:
 
 ```
-command! HelpMeNumpy :HelpMe ~/numpy_cmds.txt
-command! HelpMeShopping :HelpMe ~/shopping_list.txt
+exe "command! HelpMeNumpy :HelpMe ~/numpy_cmds.txt"
+exe "command! HelpMeShopping :HelpMe ~/shopping_list.txt"
 ```
 Invokation of `:HelpMeNumpy` and `:HelpMeShopping` will produce the output depicted in the previous two screenshots, respectively.
 
