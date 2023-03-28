@@ -47,7 +47,7 @@ This would make `ctrl+h` to open the HelpMe! menu.
 ### Sourcing from external files
 Sometimes, you want to take a look at different notes but you still want to access them at the speed of light without leaving Vim. 
 
-In such a case you can simply write your notes in an external file and source it of them through`:HelpMe <filename>`.
+In such a case you can simply write your notes in an external file and source it through`:HelpMe <filename>`.
 For example, if you have a `numpy_cmds.txt` file in your HOME directory with the following content:
 
 ```
