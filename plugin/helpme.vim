@@ -30,11 +30,11 @@ endif
 if !exists('g:HelpMeItems')
     g:HelpMeHeight = 4
     g:HelpMeItems = [
-    \ "Add items here by assigning a list to `g:HelpMeItems` in your .vimrc file",
-    \ "See README.md at https://github.com/leftbones/helpme-vim for detailed instructions",
-    \ "",
-    \ "press 'q' to close",
-    \ ]
+    "Add items here by assigning a list to `g:HelpMeItems` in your .vimrc file ",
+    "See README.md at https://github.com/ubaldot/helpme-vim for detailed instructions",
+    "",
+    "press 'q' to close",
+     ]
 else
     g:HelpMeHeight = len(g:HelpMeItems)
     g:HelpMeItems += ["", "press 'q' to close"]
@@ -50,6 +50,7 @@ def HelpMePopup(...passed_items: list<string>)
     if !empty(passed_items)
         items = readfile(passed_items[0])
     endif
+    items += ["", "press 'q' to close"]
     popup_dialog(items, {
         title: g:HelpMeWindowTitle,
         filter: HelpMeFilter,
