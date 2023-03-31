@@ -13,7 +13,6 @@ export def! g:HelpMePopup(...passed_items: list<string>)
         })
 enddef
 
-
 # close popup dialog with q
 def HelpMeFilter(id: number, key: string): bool
     if key == 'q'
