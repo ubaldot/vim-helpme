@@ -23,4 +23,4 @@ if !exists('g:HelpMeItems')
      ]
 endif
 
-command! -nargs=? -complete=file HelpMe call <sid>helpme#HelpMePopup(<f-args>)
+command! -nargs=? -complete=file HelpMe call helpme#HelpMePopup(<f-args>)
