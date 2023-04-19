@@ -1,6 +1,6 @@
 vim9script
 
-export def! g:HelpMePopup(...passed_items: list<string>)
+export def HelpMePopup(...passed_items: list<string>)
     var items = g:HelpMeItems
     if !empty(passed_items)
         items = readfile(passed_items[0])

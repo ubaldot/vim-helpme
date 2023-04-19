@@ -1,12 +1,14 @@
-if !has('vim9script') ||  v:version < 900
-  " Needs Vim version 9.0 and above
-  finish
-endif
-
 vim9script
 
-# helpme.vim
-# github.com/ubaldot/helpme-vim
+# Vim plugin for helping you in remembering stuff
+# Maintainer: Ubaldo Tiberi
+# License: same as Vim
+
+
+if !has('vim9script') ||  v:version < 900
+  # Needs Vim version 9.0 and above
+  finish
+endif
 
 
 if exists('g:helpme_loaded')
@@ -23,4 +25,6 @@ if !exists('g:HelpMeItems')
      ]
 endif
 
-command! -nargs=? -complete=file HelpMe call helpme#HelpMePopup(<f-args>)
+if !exists(":HelpMe")
+    command -nargs=? -complete=file HelpMe :call helpme#HelpMePopup(<f-args>)
+endif
