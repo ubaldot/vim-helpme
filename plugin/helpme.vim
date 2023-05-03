@@ -3,6 +3,7 @@ vim9script
 # Vim plugin for helping you in remembering stuff.
 # Maintainer: Ubaldo Tiberi
 # License: same as Vim
+# GetLatestVimScripts: 6069 1 :AutoInstall: replica.vim
 
 
 if !has('vim9script') ||  v:version < 900
