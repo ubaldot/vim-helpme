@@ -1,0 +1,10 @@
+:HelpMe	helpme.txt	/*:HelpMe*
+HelpMeCommands	helpme.txt	/*HelpMeCommands*
+HelpMeConfiguration	helpme.txt	/*HelpMeConfiguration*
+HelpMeContents	helpme.txt	/*HelpMeContents*
+HelpMeIntroduction	helpme.txt	/*HelpMeIntroduction*
+HelpMeLicense	helpme.txt	/*HelpMeLicense*
+HelpMeRequirements	helpme.txt	/*HelpMeRequirements*
+HelpMeUsage	helpme.txt	/*HelpMeUsage*
+g:HelpMeItems	helpme.txt	/*g:HelpMeItems*
+helpme.txt	helpme.txt	/*helpme.txt*

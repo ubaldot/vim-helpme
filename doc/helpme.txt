@@ -1,0 +1,104 @@
+*helpme.txt*                   Try this if you can't remember all that stuff!
+                _                 _          _                        ~
+               (_)               | |        | |                       ~
+         __   ___ _ __ ___ ______| |__   ___| |_ __  _ __ ___   ___   ~
+         \ \ / / | '_ ` _ \______| '_ \ / _ \ | '_ \| '_ ` _ \ / _ \  ~
+          \ V /| | | | | | |     | | | |  __/ | |_) | | | | | |  __/  ~
+           \_/ |_|_| |_| |_|     |_| |_|\___|_| .__/|_| |_| |_|\___|  ~
+                                              | |                     ~
+                                              |_|                     ~
+==============================================================================
+CONTENTS                                                     *HelpMeContents*
+
+    1. Introduction ................. |HelpMeIntroduction|
+    2. Requirements ................. |HelpMeRequirements|
+    3. Usage ........................ |HelpMeUsage|
+        3.1 Commands ................ |HelpMeCommands|
+    4. Configuration ................ |HelpMeConfiguration|
+    5. License ...................... |HelpMeLicense|
+
+
+==============================================================================
+INTRODUCTION                                          *HelpMeIntroduction*
+Have you ever found yourself staring at a blinking cursor on Vim's command
+line, trying your hardest to remember what the command you're trying to
+perform is?
+
+Are you learning a new SuperCoolLanguage library but you could not really
+remember that specific command and you are too tired to go through all the API
+documentation to find it out?
+
+Well, I have both of these problems and this plugin may help you too.
+
+HelpMe! is nothing more than a tiny customizable popup menu for Vim 9.0+ that
+you can fill as you want and that you can recall whenever you want.
+
+==============================================================================
+REQUIREMENTS                                         *HelpMeRequirements*
+
+HelpMe is written in Vim9script, therefore you need at least Vim 9.0.
+That is pretty much all.
+
+==============================================================================
+USAGE                                                     *HelpMeUsage*
+
+Simply enter the command |:HelpMe| to open the menu, find what you're looking
+for, then press q to close the menu.
+
+That's it.
+
+Of course, there won't be much in the menu until you add stuff to it. Use the
+following .vimrc entry as an guide for customizing your own menu:
+>
+    g:HelpMeItems = [
+        "Shortcuts:",
+        "tt           toggle split terminal buffer",
+        "daw          delete a word under the cursor",
+        "caw          change a word under the cursor and insert",
+        "di\"         delete text inside quotes (for others, change \")",
+        "ci\"         change text inside quotes (for others, change \")",
+        "<C-n>        enter multiple cursors mode",
+        "",
+        "Commands:",
+        ":H           insert nicely formatted header comment (custom)",
+        ]
+    <
+==============================================================================
+COMMANDS                                                     *HelpMeCommands*
+
+                                                                 *:HelpMe*
+:HelpMe [{file}]             Open the helpme popup menu.
+                             If {file} is not specified, then the content of
+                             |g:HelpMeItems| is displayed.
+                             Example of file content could be the following:
+                             >
+                                SHOPPING LIST
+                                -------------
+                                Potatoes
+                                Milk
+                                Bananas
+                                Pepperoni
+                                Tomatoes
+<
+
+==============================================================================
+CONFIGURATION                                           *HelpMeConfiguration*
+
+                                                           *g:HelpMeItems*
+Type: 'list'<'string'>
+Default: [
+    "Add items here by assigning a list to g:HelpMeItems in your .vimrc file. ",
+    "See :h helpme.txt for detailed instructions.",
+    "",
+     ]
+
+Message shown if {file} in |:HelpMe| is not specified.
+
+
+==============================================================================
+LICENSE                                                    *HelpMeLicense*
+
+Vim License.
+Copyright ©2023 Ubaldo Tiberi.
+
+vim:tw=78:et:ft=help:norl:
