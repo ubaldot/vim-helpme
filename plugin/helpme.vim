@@ -26,6 +26,8 @@ if !exists('g:HelpMeItems')
      ]
 endif
 
+import autoload "../lib/helpme.vim"
+
 if !exists(":HelpMe")
-    command -nargs=? -complete=file HelpMe :call <SID>helpme#HelpMePopup(<f-args>)
+    command -nargs=? -complete=file HelpMe :call <SID>helpme.HelpMePopup(<f-args>)
 endif
