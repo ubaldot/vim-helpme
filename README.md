@@ -10,13 +10,13 @@ HelpMe! is nothing more than a tiny customizable popup menu for Vim 9.0+ that yo
 
 
 ## Usage
-Simply enter the command `:HelpMe` to open the menu, find what you're looking for, then press `q` to close the menu. 
+Simply enter the command `:HelpMe` to open the menu, find what you're looking for, then press `q` to close the menu.
 
 That's it.
 
 Of course, there won't be much in the menu until you add stuff to it. Use the following `.vimrc` entry as an guide for customizing your own menu:
 
-``` 
+```
 g:HelpMeItems = [
     "Shortcuts:",
     "tt           toggle split terminal buffer",
@@ -48,7 +48,7 @@ You still need to press `q` to close the menu.
 
 
 ### Sourcing from external files
-Sometimes, you want to take a look at different notes but you still want to access them at the speed of light without leaving Vim. 
+Sometimes, you want to take a look at different notes but you still want to access them at the speed of light without leaving Vim.
 
 In such a case you can simply write your notes in an external file and source it through`:HelpMe <filename>`.
 For example, if you have a `numpy_cmds.txt` file in your HOME directory with the following content:
@@ -95,8 +95,8 @@ then `:HelpMe ~/shopping_list.txt` will produce:
 You can also create custom commands to source from different files, like for example:
 
 ```
-exe "command! HelpMeNumpy :HelpMe ~/numpy_cmds.txt"
-exe "command! HelpMeShopping :HelpMe ~/shopping_list.txt"
+command! HelpMeNumpy :HelpMe ~/numpy_cmds.txt
+command! HelpMeShopping :HelpMe ~/shopping_list.txt
 ```
 Invokation of `:HelpMeNumpy` and `:HelpMeShopping` will produce the output depicted in the previous two screenshots, respectively.
 
@@ -104,4 +104,3 @@ Invokation of `:HelpMeNumpy` and `:HelpMeShopping` will produce the output depic
 
 ## Installation
 Add `helpme.vim` to your `~/.vim/plugin/` folder, or if you're using Vim-Plug, add `Plug 'ubaldot/helpme-vim'` to your `.vimrc` file.
-
