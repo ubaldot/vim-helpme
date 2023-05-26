@@ -7,15 +7,17 @@ export def HelpMePopup(...passed_items: list<string>)
     endif
     items += ["", "press 'q' to close"]
     popup_dialog(items, {
-        title: "HelpMe!",
+        title: " HelpMe! ",
         filter: HelpMeFilter,
+        borderchars: ['─', '│', '─', '│', '╭', '╮', '╯', '╰'],
+        # border: [0, 0, 0, 0],
         maxheight: &lines - 1,
         })
 enddef
 
 # close popup dialog with q
 def HelpMeFilter(id: number, key: string): bool
-    if key == 'q'
+    if key ==# 'q'
         popup_close(id)
         return true
     else
