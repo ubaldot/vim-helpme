@@ -30,7 +30,7 @@ g:HelpMeItems = [
     ":H           insert nicely formatted header comment (custom)",
     ]
 ```
-Then, invokation of `:HelpMe` will produce:
+Then, invocation of `:HelpMe` will produce:
 
 ![helpme](/helpme_preview.png)
 
@@ -39,7 +39,7 @@ Then, invokation of `:HelpMe` will produce:
 
 You can map a shortcut to call `:HelpMe` with something like this:
 ```
-nnoremap <silent> <C-h> :HelpMe<CR>
+noremap <silent> <C-h> <Cmd>HelpMe<CR>
 ```
 
 This would make `ctrl+h` to open the HelpMe! menu.
