@@ -101,6 +101,9 @@ command! HelpMeShopping :HelpMe ~/shopping_list.txt
 Invokation of `:HelpMeNumpy` and `:HelpMeShopping` will produce the output depicted in the previous two screenshots, respectively.
 
 
-
 ## Installation
-Add `helpme.vim` to your `~/.vim/plugin/` folder, or if you're using Vim-Plug, add `Plug 'ubaldot/helpme-vim'` to your `.vimrc` file.
+Suggested installation method is through Vim-Plug: add `Plug 'ubaldot/helpme-vim'` to your `.vimrc` file run `:PlugInstall`.
+
+
+## License
+BSD-3 Clause.
