@@ -2,7 +2,7 @@ vim9script noclear
 
 # Vim plugin for helping you in remembering stuff.
 # Maintainer: Ubaldo Tiberi
-# License: same as Vim
+# License: BSD3-Clause.
 # GetLatestVimScripts: 6069 1 :AutoInstall: replica.vim
 
 
