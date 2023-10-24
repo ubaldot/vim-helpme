@@ -6,11 +6,15 @@ export def HelpMePopup(...passed_items: list<string>)
         items = readfile(passed_items[0])
     endif
     items += ["", "press 'q' to close"]
-    popup_dialog(items, {
+    popup_create(items, {
         title: " HelpMe! ",
+        line: line('$'),
+        col: col('$'),
+        pos: "center",
+        posinvert: false,
         filter: HelpMeFilter,
         borderchars: ['─', '│', '─', '│', '╭', '╮', '╯', '╰'],
-        # border: [0, 0, 0, 0],
+        border: [1, 1, 1, 1],
         maxheight: &lines - 1,
         })
 enddef
