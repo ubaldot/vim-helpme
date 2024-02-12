@@ -8,9 +8,9 @@ export def HelpMePopup(...passed_items: list<string>)
     items += ["", "press 'q' to close"]
     popup_create(items, {
         title: " HelpMe! ",
-        line: line('$'),
-        col: col('$'),
-        pos: "center",
+        line: &lines,
+        col: &columns,
+        pos: "botright",
         posinvert: false,
         filter: HelpMeFilter,
         borderchars: ['─', '│', '─', '│', '╭', '╮', '╯', '╰'],

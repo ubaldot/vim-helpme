@@ -28,6 +28,9 @@ endif
 
 import autoload "../lib/helpme.vim"
 
+# This mapping may not be needed.
+# noremap <unique> <script> <Plug>HelpMe :vim9cmd <SID>helpme.HelpMePopup(<f-args>)
+
 if !exists(":HelpMe")
     command -nargs=? -complete=file HelpMe :call <SID>helpme.HelpMePopup(<f-args>)
 endif
