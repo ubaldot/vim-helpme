@@ -49,7 +49,7 @@ Then, invocation of `:HelpMe` will produce:
 You can map a shortcut to call `:HelpMe` with something like this:
 
 ```
-noremap <silent> <leader>h <Cmd>HelpMe<CR>
+nnoremap <silent> <leader>h <Cmd>HelpMe<CR>
 ```
 
 This would make `<leader>h` to open the HelpMe! menu.
