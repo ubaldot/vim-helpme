@@ -43,9 +43,11 @@ That is pretty much all.
 USAGE                                                     *HelpMeUsage*
 
 Simply enter the command |:HelpMe| to open the menu, find what you're looking
-for, then press q to close the menu.
+for, then press 'q' or '<esc>' to close the menu.
 
 That's it.
+
+You can scroll the popup as usual with `j,k,<c-f>`, etc.
 
 Of course, there won't be much in the menu until you add stuff to it. Use the
 following .vimrc entry as an guide for customizing your own menu:
@@ -69,7 +71,8 @@ COMMANDS                                                     *HelpMeCommands*
                                                                  *:HelpMe*
 :HelpMe [{file}]             Open the helpme popup menu.
                              If {file} is not specified, then the content of
-                             |g:HelpMeItems| is displayed.
+                             |g:HelpMeItems| is displayed. You can use `<tab>`
+                             for file autocompletion.
                              Example of file content could be the following:
                              >
                                 SHOPPING LIST

@@ -32,5 +32,5 @@ import autoload "../lib/helpme.vim"
 # noremap <unique> <script> <Plug>HelpMe :vim9cmd <SID>helpme.HelpMePopup(<f-args>)
 
 if !exists(":HelpMe")
-    command -nargs=? -complete=file HelpMe :call <SID>helpme.HelpMePopup(<f-args>)
+    command -nargs=? -complete=file HelpMe helpme.HelpMePopup(<q-args>)
 endif
