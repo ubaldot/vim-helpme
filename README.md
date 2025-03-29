@@ -19,8 +19,8 @@ Simply enter the command `:HelpMe` to open the menu, find what you're looking
 for, then press `q` to close the menu.
 
 That's it.
-
 You can scroll the popup as usual with `j,k,<c-f>`, etc.
+
 
 Of course, there won't be much in the menu until you add stuff to it. Use the
 following `.vimrc` entry as an guide for customizing your own menu:
@@ -110,7 +110,7 @@ command! HelpMeNumpy :HelpMe ~/numpy_cmds.txt
 command! HelpMeShopping :HelpMe ~/shopping_list.txt
 ```
 
-Invokation of `:HelpMeNumpy` and `:HelpMeShopping` will produce the output
+Invocation of `:HelpMeNumpy` and `:HelpMeShopping` will produce the output
 depicted in the previous two screenshots, respectively.
 
 ## Installation
