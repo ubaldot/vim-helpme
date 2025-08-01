@@ -16,31 +16,32 @@ you can fill as you want and that you can recall whenever you want.
 ## Usage
 
 Simply enter the command `:HelpMe` to open the menu, find what you're looking
-for, then press `q` to close the menu.
+for, then press `q` or `<esc>` to close the menu.
 
-That's it.
-You can scroll the popup as usual with `j,k,<c-f>`, etc.
+That's it. You can scroll the popup as usual with `j, k, <c-f>`, etc.
 
-
-Of course, there won't be much in the menu until you add stuff to it. Use the
-following `.vimrc` entry as an guide for customizing your own menu:
+Of course, there won't be much in the menu until you add stuff to it. Add the
+following lines to your `.vimrc` to see how the plugin works in practice:
 
 ```
 g:HelpMeItems = [
-    "Shortcuts:",
-    "tt           toggle split terminal buffer",
-    "daw          delete a word under the cursor",
-    "caw          change a word under the cursor and insert",
-    "di\"         delete text inside quotes (for others, change \")",
-    "ci\"         change text inside quotes (for others, change \")",
-    "<C-n>        enter multiple cursors mode",
+    "## Shortcuts:",
     "",
-    "Commands:",
-    ":H           insert nicely formatted header comment (custom)",
-    ]
+    "**tt**           toggle split terminal buffer",
+    "**daw**          delete a word under the cursor",
+    "**caw**          change a word under the cursor and insert",
+    "**di\"**          delete text inside quotes (for others, change `\"`)",
+    "**ci\"**          change text inside quotes (for others, change `\"`)",
+    "**<C-n>**        enter multiple cursors mode",
+    "",
+    "*Commands:*",
+    "**:H**           insert nicely formatted header comment (custom)",
+  ]
 ```
 
-Then, invocation of `:HelpMe` will produce:
+Note that you can use markdown formalism to make your notes to stand out!
+
+Next, invocation of `:HelpMe` will produce the following popup:
 
 ![helpme](/helpme_preview.png)
 
@@ -52,8 +53,8 @@ You can map a shortcut to call `:HelpMe` with something like this:
 nnoremap <silent> <leader>h <Cmd>HelpMe<CR>
 ```
 
-This would make `<leader>h` to open the HelpMe! menu.
-You still need to press `q` or `<esc>` to close the menu.
+This would make `<leader>h` to open the HelpMe! menu. You still need to press
+`q` or `<esc>` to close the menu.
 
 ### Sourcing from external files
 

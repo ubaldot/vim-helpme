@@ -11,12 +11,11 @@ if !has('vim9script') ||  v:version < 900
   finish
 endif
 
-
-if exists('g:helpme_loaded')
+if exists('g:helpme_loaded') && g:helpme_loaded
     finish
 endif
 
-g:helpme_loaded = 1
+g:helpme_loaded = true
 
 if !exists('g:HelpMeItems')
     g:HelpMeItems = [
@@ -26,10 +25,7 @@ if !exists('g:HelpMeItems')
      ]
 endif
 
-import autoload "../lib/helpme.vim"
-
-# This mapping may not be needed.
-# noremap <unique> <script> <Plug>HelpMe :vim9cmd <SID>helpme.HelpMePopup(<f-args>)
+import "../autoload/helpme.vim"
 
 if !exists(":HelpMe")
     command -nargs=? -complete=file HelpMe helpme.HelpMePopup(<q-args>)

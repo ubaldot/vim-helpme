@@ -47,24 +47,25 @@ for, then press 'q' or '<esc>' to close the menu.
 
 That's it.
 
-You can scroll the popup as usual with `j,k,<c-f>`, etc.
+You can scroll the popup as usual with `j, k, <c-f>`, etc.
 
 Of course, there won't be much in the menu until you add stuff to it. Use the
 following .vimrc entry as an guide for customizing your own menu:
 >
-    g:HelpMeItems = [
-        "Shortcuts:",
-        "tt           toggle split terminal buffer",
-        "daw          delete a word under the cursor",
-        "caw          change a word under the cursor and insert",
-        "di\"         delete text inside quotes (for others, change \")",
-        "ci\"         change text inside quotes (for others, change \")",
-        "<C-n>        enter multiple cursors mode",
-        "",
-        "Commands:",
-        ":H           insert nicely formatted header comment (custom)",
-        ]
-    <
+  g:HelpMeItems = [
+      "## Shortcuts:",
+      "",
+      "**tt**           toggle split terminal buffer",
+      "**daw**          delete a word under the cursor",
+      "**caw**          change a word under the cursor and insert",
+      "**di\"**          delete text inside quotes (for others, change `\"`)",
+      "**ci\"**          change text inside quotes (for others, change `\"`)",
+      "**<C-n>**        enter multiple cursors mode",
+      "",
+      "*Commands:*",
+      "**:H**           insert nicely formatted header comment (custom)",
+    ]
+<
 ==============================================================================
 COMMANDS                                                     *HelpMeCommands*
 
