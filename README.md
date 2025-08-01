@@ -59,10 +59,9 @@ This would make `<leader>h` to open the HelpMe! menu. You still need to press
 ### Sourcing from external files
 
 Sometimes, you want to take a look at different notes but you still want to
-access them at the speed of light without leaving Vim.
-
-In such a case you can simply write your notes in an external file and source
-it through`:HelpMe <filename>`. For example, if you have a `shopping_list.txt`
+access them at the speed of light without leaving Vim. In such a case you can
+simply write your notes in an external file and source it
+through`:HelpMe <filename>`. For example, if you have a `shopping_list.txt`
 file in your `HOME` directory with the following content:
 
 ```
@@ -83,12 +82,11 @@ You can also create custom commands to source from different files, like for
 example:
 
 ```
-command! HelpMeNumpy :HelpMe ~/numpy_cmds.txt
 command! HelpMeShopping :HelpMe ~/shopping_list.txt
 ```
 
-Invocation of `:HelpMeNumpy` and `:HelpMeShopping` will produce the output
-depicted in the previous two screenshots, respectively.
+Invocation of `:HelpMeShopping` will produce the output depicted in the
+previous screenshots.
 
 ## Installation
 
