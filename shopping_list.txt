@@ -1,0 +1,7 @@
+# SHOPPING LIST
+
+Potatoes
+Milk
+**Bananas**
+Pepperoni
+*Tomatoes*

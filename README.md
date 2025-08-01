@@ -62,46 +62,22 @@ Sometimes, you want to take a look at different notes but you still want to
 access them at the speed of light without leaving Vim.
 
 In such a case you can simply write your notes in an external file and source
-it through`:HelpMe <filename>`. For example, if you have a `numpy_cmds.txt`
-file in your HOME directory with the following content:
+it through`:HelpMe <filename>`. For example, if you have a `shopping_list.txt`
+file in your `HOME` directory with the following content:
 
 ```
-USEFUL NUMPY CONSTANTS
-np.inf - Infinity
-np.NINF - Negative infinity
-np.NaN - Not a number
-np.PI - 3.1415926535897932384626433...
-np.e - 2.718281828459045235360287471...
+# SHOPPING LIST
 
-USEFUL NDARRAY METHODS
-A = np.array([[3, 1, 4], [5, -1, 9]]) - Array creation
-iter = A.flat - iter is a np.ndarray iterator (it scans by rows)
-A = np.atleast_1d(1.0) - A is a 1D np.ndarray
-
-LINEAR ALGERBA
-A @ B - Matrix multiplication
-lambda, U = la.eig(A) - eigenvalues and (right) eigenvectors
-```
-
-then `:HelpMe ~/numpy_cmds.txt` will produce:
-
-![helpme](/numpy_preview.png)
-
-or, if you have a `shopping_list.txt` with the following content:
-
-```
-SHOPPING LIST
--------------
 Potatoes
 Milk
-Bananas
-Peperoni
-Tomatoes
+**Bananas**
+Pepperoni
+*Tomatoes*
 ```
 
 then `:HelpMe ~/shopping_list.txt` will produce:
 
-![helpme](/shopping_list_preview.png)
+![helpme](/shopping_list.png)
 
 You can also create custom commands to source from different files, like for
 example:
