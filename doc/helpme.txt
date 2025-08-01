@@ -76,13 +76,13 @@ COMMANDS                                                     *HelpMeCommands*
                              for file autocompletion.
                              Example of file content could be the following:
                              >
-                                SHOPPING LIST
-                                -------------
+                                # SHOPPING LIST
+
                                 Potatoes
                                 Milk
-                                Bananas
+                                **Bananas**
                                 Pepperoni
-                                Tomatoes
+                                *Tomatoes*
 <
 
 ==============================================================================
@@ -104,7 +104,7 @@ LICENSE                                                    *HelpMeLicense*
 
 BSD 3-Clause License
 
-Copyright (c) 2023, Ubaldo Tiberi.
+Copyright (c) 2025, Ubaldo Tiberi.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
