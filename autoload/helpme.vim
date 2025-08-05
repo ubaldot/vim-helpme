@@ -2,9 +2,35 @@ vim9script
 
 var popup_id = -1
 
+export def Echoerr(msg: string)
+  echohl ErrorMsg | echom $'[helpme] {msg}' | echohl None
+enddef
+
 export def HelpMePopup(passed_items: string = '')
-    var items = empty(passed_items) ? g:HelpMeItems : readfile(passed_items)
-    items += ["", "press 'q' or <esc> to close"]
+    var items: any
+
+    # Select input
+    if !empty(passed_items)
+      if filereadable(fnamemodify(passed_items, ':p'))
+        items = readfile(passed_items)
+      elseif typename(eval(passed_items)) == 'list<string>'
+        items = eval(passed_items)
+      else
+        Echoerr("Argument must be a file or a 'list<string>'")
+      endif
+    elseif exists('g:HelpMeItems') != 0
+      items = g:HelpMeItems
+    else
+      items =<< trim END
+      Add items here by assigning a list to `g:HelpMeItems` OR by passing a
+      text file OR by passing a list of strings to `:HelpMe` command.
+
+      See :h helpme.txt for detailed instructions
+
+END
+    endif
+
+    items = items + ["", "press 'q' or <esc> to close"]
     popup_id = popup_create(items, {
         title: " HelpMe! ",
         line: &lines,

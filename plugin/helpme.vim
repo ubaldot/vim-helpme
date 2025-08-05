@@ -14,19 +14,8 @@ endif
 if exists('g:helpme_loaded') && g:helpme_loaded
     finish
 endif
-
-g:helpme_loaded = true
-
-if !exists('g:HelpMeItems')
-    g:HelpMeItems = [
-    "Add items here by assigning a list to `g:HelpMeItems` in your .vimrc file ",
-    "See :h helpme.txt for detailed instructions.",
-    "",
-     ]
-endif
+g:helpme_loaded = false
 
 import "../autoload/helpme.vim"
 
-if !exists(":HelpMe")
-    command -nargs=? -complete=file HelpMe helpme.HelpMePopup(<q-args>)
-endif
+command! -nargs=? HelpMe helpme.HelpMePopup(<f-args>)

@@ -43,15 +43,18 @@ That is pretty much all.
 USAGE                                                     *HelpMeUsage*
 
 Simply enter the command |:HelpMe| to open the menu, find what you're looking
-for, then press 'q' or '<esc>' to close the menu.
+for, then press `q` or `<esc>` to close the menu.
 
-That's it.
+That's it. You can scroll the popup as usual with |j|, |k|, |<c-f>|, etc.
 
-You can scroll the popup as usual with `j, k, <c-f>`, etc.
+Of course, there won't be much in the menu until you add stuff to it. You can
+do it in a number of ways.
 
-Of course, there won't be much in the menu until you add stuff to it. Use the
-following .vimrc entry as an guide for customizing your own menu:
->
+
+Option 1~
+Add the following lines to your |.vimrc|:
+
+>vim
   g:HelpMeItems = [
       "## Shortcuts:",
       "",
@@ -66,14 +69,46 @@ following .vimrc entry as an guide for customizing your own menu:
       "**:H**           insert nicely formatted header comment (custom)",
     ]
 <
+
+Option 2~
+Invoke |:HelpMe| with a text file, i.e. `:HelpMe /path/to/file`. If you have a
+`shopping_list.txt` file in your `$HOME` directory with the following content:
+
+>
+  # SHOPPING LIST
+
+  *Potatoes*
+  Milk
+  **Bananas**
+  Pepperoni
+  Tomatoes
+<
+
+You can also create custom commands to source from different files, like for
+example:
+
+>vim
+  command! HelpMeShopping :HelpMe ~/shopping_list.txt
+<
+
+Invocation of `:HelpMeShopping` will produce the output depicted in the
+previous screenshots.
+
+
+Option 3~
+Pass a list of strings to |:HelpMe| command, for example run
+`:HelpMe ['potato', 'carrots', 'strawberries']` to have an effect like the
+ones depicted above.
+
 ==============================================================================
 COMMANDS                                                     *HelpMeCommands*
 
                                                                  *:HelpMe*
-:HelpMe [{file}]             Open the helpme popup menu.
-                             If {file} is not specified, then the content of
-                             |g:HelpMeItems| is displayed. You can use `<tab>`
-                             for file autocompletion.
+:HelpMe [{args}]             Open the helpme popup menu.
+                             If {args} is not specified, then the content of
+                             |g:HelpMeItems| is displayed.
+                             If {args} is a text file, then the content of
+                             {args} is displayed in the popup.
                              Example of file content could be the following:
                              >
                                 # SHOPPING LIST
@@ -84,20 +119,17 @@ COMMANDS                                                     *HelpMeCommands*
                                 Pepperoni
                                 *Tomatoes*
 <
+                            If {args} is a `list<string>`, then the items of
+                            the list are displayed in the popup menu.
 
 ==============================================================================
 CONFIGURATION                                           *HelpMeConfiguration*
 
                                                            *g:HelpMeItems*
 Type: 'list'<'string'>
-Default: [
-    "Add items here by assigning a list to g:HelpMeItems in your .vimrc file. ",
-    "See :h helpme.txt for detailed instructions.",
-    "",
-     ]
+Default: []
 
-Message shown if {file} in |:HelpMe| is not specified.
-
+Message shown if {args} in |:HelpMe| is not specified.
 
 ==============================================================================
 LICENSE                                                    *HelpMeLicense*

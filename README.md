@@ -20,8 +20,12 @@ for, then press `q` or `<esc>` to close the menu.
 
 That's it. You can scroll the popup as usual with `j, k, <c-f>`, etc.
 
-Of course, there won't be much in the menu until you add stuff to it. Add the
-following lines to your `.vimrc` to see how the plugin works in practice:
+Of course, there won't be much in the menu until you add stuff to it. You can
+do it in a number of ways.
+
+#### Option 1
+
+Add the following lines to your `.vimrc`:
 
 ```
 g:HelpMeItems = [
@@ -39,30 +43,16 @@ g:HelpMeItems = [
   ]
 ```
 
-Note that you can use markdown formalism to make your notes to stand out!
-
 Next, invocation of `:HelpMe` will produce the following popup:
 
 ![helpme](/helpme_preview.png)
 
-### Mapping
+Note that you can use markdown formalism to make your notes to stand out!
 
-You can map a shortcut to call `:HelpMe` with something like this:
+#### Option 2
 
-```
-nnoremap <silent> <leader>h <Cmd>HelpMe<CR>
-```
-
-This would make `<leader>h` to open the HelpMe! menu. You still need to press
-`q` or `<esc>` to close the menu.
-
-### Sourcing from external files
-
-Sometimes, you want to take a look at different notes but you still want to
-access them at the speed of light without leaving Vim. In such a case you can
-simply write your notes in an external file and source it
-through`:HelpMe <filename>`. For example, if you have a `shopping_list.txt`
-file in your `HOME` directory with the following content:
+Invoke `:HelpMe` with a text file, i.e. `:HelpMe /path/to/file`. If you have a
+`shopping_list.txt` file in your `HOME` directory with the following content:
 
 ```
 # SHOPPING LIST
@@ -81,12 +71,37 @@ then `:HelpMe ~/shopping_list.txt` will produce:
 You can also create custom commands to source from different files, like for
 example:
 
-```
+```vim
 command! HelpMeShopping :HelpMe ~/shopping_list.txt
 ```
 
 Invocation of `:HelpMeShopping` will produce the output depicted in the
 previous screenshots.
+
+#### Option 3
+
+Pass a list of strings to `:HelpMe` command, for example run
+`:HelpMe ['potato', 'carrots', 'strawberries']` to have an effect like the
+ones depicted above.
+
+### Mapping & Commands
+
+You can use utilitarian mappings like the following:
+
+```vim
+nnoremap <silent> <leader>h <Cmd>HelpMe ~/shopping_list.txt<CR>
+```
+
+This would make `<leader>h` to open the HelpMe! popup shwoing the content of
+`~/shopping_list.txt`.
+
+You can also define utilitarian commands like the following:
+
+```vim
+  command! HelpMeShopping :HelpMe ~/shopping_list.txt
+```
+
+You still need to press `q` or `<esc>` to close the popup.
 
 ## Installation
 
