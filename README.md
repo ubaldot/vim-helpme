@@ -15,13 +15,12 @@ you can fill as you want and that you can recall whenever you want.
 
 ## Usage
 
-Simply enter the command `:HelpMe` to open the menu, find what you're looking
-for, then press `q` or `<esc>` to close the menu.
-
-That's it. You can scroll the popup as usual with `j, k, <c-f>`, etc.
+Simply enter the command `:HelpMe` to open the popup and press `q` or `<esc>`
+to close it. That's it. You can scroll the popup as usual with `j, k, <c-f>`,
+etc.
 
 Of course, there won't be much in the menu until you add stuff to it. You can
-do it in a number of ways.
+do it in a number of ways, as described next.
 
 ### Option 1
 
@@ -47,7 +46,7 @@ Next, invocation of `:HelpMe` will produce the following popup:
 
 ![helpme](/helpme_preview.png)
 
-Note that you can use markdown formalism to make your notes to stand out!
+Note that you can use markdown language to make your notes to stand out!
 
 ### Option 2
 

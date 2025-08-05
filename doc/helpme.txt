@@ -42,13 +42,12 @@ That is pretty much all.
 ==============================================================================
 USAGE                                                     *HelpMeUsage*
 
-Simply enter the command |:HelpMe| to open the menu, find what you're looking
-for, then press `q` or `<esc>` to close the menu.
-
-That's it. You can scroll the popup as usual with |j|, |k|, |<c-f>|, etc.
+Simply enter the command |:HelpMe| to open the popup and press `q` or `<esc>`
+to close it.  That's it.
+You can scroll the popup as usual with |j|, |k|, |<c-f>|, etc.
 
 Of course, there won't be much in the menu until you add stuff to it. You can
-do it in a number of ways.
+do it in a number of ways, as described next.
 
 
 Option 1~
