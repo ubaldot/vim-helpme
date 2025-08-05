@@ -83,6 +83,8 @@ Pass a list of strings to `:HelpMe` command, for example run
 `:HelpMe ['potato', 'carrots', 'strawberries']` to have an effect like the
 ones depicted above.
 
+In all the cases the popup filetype is set to `markdown`.
+
 ### Mapping & Commands
 
 You can use utilitarian mappings like the following:

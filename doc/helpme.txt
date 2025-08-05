@@ -76,9 +76,9 @@ Invoke |:HelpMe| with a text file, i.e. `:HelpMe /path/to/file`. If you have a
 >
   # SHOPPING LIST
 
-  *Potatoes*
+  Potatoes
   Milk
-  **Bananas**
+  Bananas
   Pepperoni
   Tomatoes
 <
@@ -99,6 +99,9 @@ Pass a list of strings to |:HelpMe| command, for example run
 `:HelpMe ['potato', 'carrots', 'strawberries']` to have an effect like the
 ones depicted above.
 
+In all the cases the popup |filetype| is set to `markdown`.
+
+
 ==============================================================================
 COMMANDS                                                     *HelpMeCommands*
 
@@ -114,9 +117,9 @@ COMMANDS                                                     *HelpMeCommands*
 
                                 Potatoes
                                 Milk
-                                **Bananas**
+                                Bananas
                                 Pepperoni
-                                *Tomatoes*
+                                Tomatoes
 <
                             If {args} is a `list<string>`, then the items of
                             the list are displayed in the popup menu.
