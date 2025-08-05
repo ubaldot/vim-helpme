@@ -23,7 +23,7 @@ That's it. You can scroll the popup as usual with `j, k, <c-f>`, etc.
 Of course, there won't be much in the menu until you add stuff to it. You can
 do it in a number of ways.
 
-#### Option 1
+### Option 1
 
 Add the following lines to your `.vimrc`:
 
@@ -49,7 +49,7 @@ Next, invocation of `:HelpMe` will produce the following popup:
 
 Note that you can use markdown formalism to make your notes to stand out!
 
-#### Option 2
+### Option 2
 
 Invoke `:HelpMe` with a text file, i.e. `:HelpMe /path/to/file`. If you have a
 `shopping_list.txt` file in your `HOME` directory with the following content:
@@ -78,7 +78,7 @@ command! HelpMeShopping :HelpMe ~/shopping_list.txt
 Invocation of `:HelpMeShopping` will produce the output depicted in the
 previous screenshots.
 
-#### Option 3
+### Option 3
 
 Pass a list of strings to `:HelpMe` command, for example run
 `:HelpMe ['potato', 'carrots', 'strawberries']` to have an effect like the
