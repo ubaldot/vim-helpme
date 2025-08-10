@@ -18,4 +18,4 @@ g:helpme_loaded = false
 
 import "../autoload/helpme.vim"
 
-command! -nargs=? HelpMe helpme.HelpMePopup(<f-args>)
+command! -nargs=? -complete=file HelpMe helpme.HelpMePopup(<f-args>)
