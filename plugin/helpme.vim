@@ -1,4 +1,4 @@
-vim9script noclear
+vim9script
 
 # Vim plugin for helping you in remembering stuff.
 # Maintainer: Ubaldo Tiberi
