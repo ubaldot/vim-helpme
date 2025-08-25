@@ -11,10 +11,7 @@ if !has('vim9script') ||  v:version < 900
   finish
 endif
 
-if exists('g:loaded_helpme') && g:loaded_helpme
-    finish
-endif
-g:loaded_helpme = false
+g:loaded_helpme = true
 
 import "../autoload/helpme.vim"
 
