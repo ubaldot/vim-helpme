@@ -13,6 +13,6 @@ endif
 
 g:loaded_helpme = true
 
-import "../autoload/helpme.vim"
+import autoload "../lib/helpme.vim"
 
 command! -nargs=? -complete=file HelpMe helpme.HelpMePopup(<f-args>)
